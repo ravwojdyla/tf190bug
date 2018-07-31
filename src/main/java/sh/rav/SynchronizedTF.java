@@ -4,9 +4,9 @@ import org.tensorflow.Tensor;
 import org.tensorflow.Tensors;
 import org.tensorflow.example.Example;
 
-public class TestTF {
+public class SynchronizedTF {
 
-    static Tensor<?> createTensor(){
+    synchronized static Tensor<?> createTensor(){
         Example e = Example.newBuilder().build();
         return Tensors.create(e.toByteArray());
     }
