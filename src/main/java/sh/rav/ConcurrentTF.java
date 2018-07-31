@@ -15,7 +15,7 @@ public class ConcurrentTF {
         for (int i = 0; i < 10; i++) {
             new Thread(new Runnable() {
                 public void run() {
-                    createTensor();
+                    createTensor().close();
                 }
             }).start();
         }

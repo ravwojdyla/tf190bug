@@ -10,7 +10,7 @@ gcloud compute instances create <NAME> --image-family=cos-stable --image-project
 2. run:
 
 ```
-docker run --rm docker.io/ravwojdyla/tf190bug
+docker run --cap-add=SYS_PTRACE --security-opt seccomp=unconfined --rm docker.io/ravwojdyla/tf190bug
 ```
 
 Building
